@@ -25,7 +25,18 @@ from __future__ import annotations
 
 import sys
 import os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# Find project root by looking for requirements.txt
+def find_project_root(start_path=__file__):
+    current_path = os.path.dirname(os.path.abspath(start_path))
+    while current_path != os.path.dirname(current_path):  # Stop at filesystem root
+        if os.path.exists(os.path.join(current_path, 'requirements.txt')):
+            return current_path
+        current_path = os.path.dirname(current_path)
+    return os.path.dirname(os.path.abspath(start_path))
+
+project_root = find_project_root()
+sys.path.insert(0, project_root)
 
 import gc
 import warnings

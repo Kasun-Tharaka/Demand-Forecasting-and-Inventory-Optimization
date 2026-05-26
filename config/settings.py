@@ -168,3 +168,39 @@ LEAD_TIME_DAYS_STD: float  = 1.5
 # Cost parameters (unit: USD)
 HOLDING_COST_PER_UNIT_DAY: float = 0.05   # cost to hold 1 unit for 1 day
 STOCKOUT_PENALTY_PER_UNIT: float = 2.00   # lost-sale cost per unit
+
+# ─────────────────────────────────────────────────────────────
+# Phase 2 — Data Cleaning Constants
+# ─────────────────────────────────────────────────────────────
+# Sentinel value written to event columns when no event exists
+EVENT_NULL_FILL: str   = "No_Event"
+PRICE_NULL_STRATEGY: str = "ffill_bfill_then_median"  # group fill, then global median
+
+# Processed / cleaned artefact paths
+PROCESSED_CLEAN  = DATA_PROCESSED / "sales_clean.parquet"
+
+# ─────────────────────────────────────────────────────────────
+# Phase 2 — Feature Engineering Constants
+# ─────────────────────────────────────────────────────────────
+# Lag windows (ALL must be >= FORECAST_HORIZON=28 to prevent leakage)
+LAG_DAYS: list = [28, 29, 30, 35, 42, 56]
+
+# Rolling windows (computed on lag-28-shifted sales)
+ROLLING_WINDOWS: list = [7, 14, 28, 56]
+
+# Rolling statistics to compute
+ROLLING_STATS: list = ["mean", "std", "min", "max"]
+
+# Categorical columns to label-encode for tree models
+CATEGORICAL_ENCODE_COLS: list = [
+    "item_id", "dept_id", "cat_id", "store_id", "state_id",
+    "event_type_1", "event_type_2", "weekday",
+]
+
+# Feature store output paths
+FEATURES_STORE_DIR = DATA_PROCESSED / "feature_store"
+FEATURES_TRAIN     = FEATURES_STORE_DIR / "features_train.parquet"
+FEATURES_VALID     = FEATURES_STORE_DIR / "features_valid.parquet"
+FEATURES_TEST      = FEATURES_STORE_DIR / "features_test.parquet"
+LABEL_ENCODERS_PATH= FEATURES_STORE_DIR / "label_encoders.pkl"
+FEATURE_MANIFEST   = FEATURES_STORE_DIR / "feature_manifest.json"
