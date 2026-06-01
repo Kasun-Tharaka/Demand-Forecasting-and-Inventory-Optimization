@@ -33,6 +33,7 @@ Usage
     df_clean = cleaner.clean(df_merged)   # raises RuntimeError if nulls remain
     cleaner.print_audit()
 """
+
 from __future__ import annotations
 
 import gc
@@ -61,6 +62,7 @@ def _null_map(df: pd.DataFrame) -> Dict[str, int]:
 
 def _pct(n: int, total: int) -> str:
     return f"{n / total * 100:.3f}%" if total > 0 else "0.000%"
+
 
 
 # ─────────────────────────────────────────────────────────────
