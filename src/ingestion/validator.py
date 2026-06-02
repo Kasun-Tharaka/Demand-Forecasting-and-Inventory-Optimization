@@ -82,6 +82,7 @@ class ValidationReport:
 # Expected schema definitions
 # ─────────────────────────────────────────────────────────────
 
+
 # Minimum columns (not exhaustive — just the ones we depend on)
 CALENDAR_REQUIRED_COLS = {
     "date", "d", "wm_yr_wk", "wday", "month", "year",
@@ -96,6 +97,7 @@ LONG_REQUIRED_COLS = {
     "id", "item_id", "dept_id", "cat_id", "store_id", "state_id",
     "d", "sales", "date", "wm_yr_wk", "sell_price",
 }
+
 
 # Documented M5 dimensions
 M5_N_ITEMS  = 30_490     # unique series in sales_train_validation
