@@ -266,6 +266,7 @@ class FeatureStore:
         }
         _PRICE_COLS = {"sell_price","is_price_promo"}
 
+
         for col in df.columns:
             if col in _ID_COLS:
                 groups["identifiers"].append(col)
