@@ -175,6 +175,7 @@ class FeatureEngineer:
                 "This causes data leakage. All lags must be >= 28."
             )
 
+
     # ── Public ────────────────────────────────────────────────
 
     def build(self, df: pd.DataFrame) -> pd.DataFrame:
