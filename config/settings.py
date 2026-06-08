@@ -16,7 +16,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 
-# ─────────────────────────────────────────────────────────────
+
 # Root Paths
 # ─────────────────────────────────────────────────────────────
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -29,7 +29,7 @@ OUTPUTS_MODELS = PROJECT_ROOT / "outputs" / "models"
 OUTPUTS_REPORTS= PROJECT_ROOT / "outputs" / "reports"
 
 
-# ─────────────────────────────────────────────────────────────
+
 # Raw File Paths
 # ─────────────────────────────────────────────────────────────
 RAW_SALES     = DATA_RAW / "sales_train_validation.csv"
@@ -38,7 +38,7 @@ RAW_PRICES    = DATA_RAW / "sell_prices.csv"
 RAW_SALES_EVAL= DATA_RAW / "sales_train_evaluation.csv"   # optional
 
 
-# ─────────────────────────────────────────────────────────────
+
 # Processed / Cached Artefacts
 # ─────────────────────────────────────────────────────────────
 PROCESSED_LONG    = DATA_PROCESSED / "sales_long.parquet"
@@ -47,7 +47,7 @@ PROCESSED_CALENDAR= DATA_PROCESSED / "calendar_clean.parquet"
 PROCESSED_PRICES  = DATA_PROCESSED / "prices_clean.parquet"
 
 
-# ─────────────────────────────────────────────────────────────
+
 # M5 Dataset Constants
 # ─────────────────────────────────────────────────────────────
 # Total training days in validation set
@@ -72,7 +72,7 @@ STORES = ["CA_1", "CA_2", "CA_3", "CA_4",
 CATEGORIES = ["HOBBIES", "HOUSEHOLD", "FOODS"]
 
 
-# ─────────────────────────────────────────────────────────────
+
 # Dtype Schemas — the cornerstone of memory optimisation
 # ─────────────────────────────────────────────────────────────
 
@@ -131,7 +131,7 @@ LONG_DTYPES: dict[str, str] = {
 }
 
 
-# ─────────────────────────────────────────────────────────────
+
 # Ingestion Pipeline Settings
 # ─────────────────────────────────────────────────────────────
 # Number of day-columns to process per chunk during the melt
