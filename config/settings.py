@@ -145,7 +145,7 @@ PARQUET_COMPRESSION: str = "snappy"
 RANDOM_SEED: int = 42
 
 
-# ─────────────────────────────────────────────────────────────
+
 # Walk-Forward Cross-Validation Splits (Phase 4)
 # ─────────────────────────────────────────────────────────────
 CV_TRAIN_END_DAY  = 1800
@@ -155,7 +155,7 @@ CV_TEST_START_DAY = 1857
 CV_TEST_END_DAY   = 1913
 
 
-# ─────────────────────────────────────────────────────────────
+
 # Inventory Optimisation Parameters (Phase 5)
 # ─────────────────────────────────────────────────────────────
 TARGET_SERVICE_LEVEL: float = 0.95   # → Z = 1.645
@@ -169,7 +169,7 @@ LEAD_TIME_DAYS_STD: float  = 1.5
 HOLDING_COST_PER_UNIT_DAY: float = 0.05   # cost to hold 1 unit for 1 day
 STOCKOUT_PENALTY_PER_UNIT: float = 2.00   # lost-sale cost per unit
 
-# ─────────────────────────────────────────────────────────────
+
 # Phase 2 — Data Cleaning Constants
 # ─────────────────────────────────────────────────────────────
 # Sentinel value written to event columns when no event exists
@@ -179,7 +179,7 @@ PRICE_NULL_STRATEGY: str = "ffill_bfill_then_median"  # group fill, then global 
 # Processed / cleaned artefact paths
 PROCESSED_CLEAN  = DATA_PROCESSED / "sales_clean.parquet"
 
-# ─────────────────────────────────────────────────────────────
+
 # Phase 2 — Feature Engineering Constants
 # ─────────────────────────────────────────────────────────────
 # Lag windows (ALL must be >= FORECAST_HORIZON=28 to prevent leakage)
