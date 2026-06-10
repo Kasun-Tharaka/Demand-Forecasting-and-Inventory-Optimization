@@ -49,7 +49,7 @@ from loguru import logger
 import config.settings as cfg
 
 
-# ─────────────────────────────────────────────────────────────
+
 # Data Structures
 # ─────────────────────────────────────────────────────────────
 
@@ -78,7 +78,7 @@ class ValidationReport:
         return sum(not c.passed for c in self.checks)
 
 
-# ─────────────────────────────────────────────────────────────
+
 # Expected schema definitions
 # ─────────────────────────────────────────────────────────────
 
