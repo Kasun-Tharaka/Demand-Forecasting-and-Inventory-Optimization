@@ -105,7 +105,7 @@ M5_N_DAYS   = 1_913      # d_1 through d_1913
 M5_CALENDAR_ROWS = 1_969 # calendar has rows beyond training horizon
 
 
-# ─────────────────────────────────────────────────────────────
+
 # Validator Class
 # ─────────────────────────────────────────────────────────────
 
