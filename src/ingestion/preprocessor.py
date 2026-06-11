@@ -314,7 +314,6 @@ class M5Preprocessor:
         logger.info(f"Final Parquet size on disk: {final_mb:.1f} MB")
 
 
-# ─────────────────────────────────────────────────────────────
 # CLI entry point
 # ─────────────────────────────────────────────────────────────
 if __name__ == "__main__":
