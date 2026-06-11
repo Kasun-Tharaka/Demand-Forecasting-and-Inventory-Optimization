@@ -53,7 +53,7 @@ import config.settings as cfg
 from src.ingestion.loader import M5DataLoader, downcast_dataframe, _df_mb, _ram_mb
 
 
-# ─────────────────────────────────────────────────────────────
+
 # Calendar helper
 # ─────────────────────────────────────────────────────────────
 
@@ -74,7 +74,7 @@ def _prepare_calendar(cal: "pd.DataFrame") -> "pd.DataFrame":
     return cal[keep].copy()
 
 
-# ─────────────────────────────────────────────────────────────
+
 # Main Preprocessor Class
 # ─────────────────────────────────────────────────────────────
 
@@ -126,13 +126,13 @@ class M5Preprocessor:
             logger.info("Pass force_reprocess=True to rebuild from scratch.")
             return self.output_path
 
-        logger.info("═" * 60)
+        logger.info("═" * 50)
         logger.info("M5 Ingestion Pipeline — START")
         logger.info(f"  Backend     : {_BACKEND}")
         logger.info(f"  Chunk size  : {self.chunk_size} day-columns")
         logger.info(f"  Output      : {self.output_path}")
         logger.info(f"  RAM at start: {_ram_mb():.0f} MB")
-        logger.info("═" * 60)
+        logger.info("═" * 50)
 
         t_total = time.perf_counter()
 
