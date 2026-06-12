@@ -214,7 +214,7 @@ def plot_zero_inflation(df: pd.DataFrame) -> None:
     savefig("02_zero_inflation.png")
 
 
-# ─────────────────────────────────────────────────────────────
+
 # 3. Hierarchical Aggregation
 # ─────────────────────────────────────────────────────────────
 
@@ -251,7 +251,7 @@ def plot_hierarchy_aggregation(df: pd.DataFrame) -> None:
     savefig("03_hierarchy_aggregation.png")
 
 
-# ─────────────────────────────────────────────────────────────
+
 # 4. Seasonality Analysis
 # ─────────────────────────────────────────────────────────────
 
@@ -294,7 +294,7 @@ def plot_seasonality(df: pd.DataFrame) -> None:
     savefig("04_seasonality.png")
 
 
-# ─────────────────────────────────────────────────────────────
+
 # 5. Price Elasticity
 # ─────────────────────────────────────────────────────────────
 
@@ -337,7 +337,7 @@ def plot_price_elasticity(df: pd.DataFrame) -> None:
     savefig("05_price_elasticity.png")
 
 
-# ─────────────────────────────────────────────────────────────
+
 # 6. SNAP Benefit Day Effect
 # ─────────────────────────────────────────────────────────────
 
@@ -372,7 +372,7 @@ def plot_snap_effect(df: pd.DataFrame) -> None:
     savefig("06_snap_effect.png")
 
 
-# ─────────────────────────────────────────────────────────────
+
 # 7. Summary Statistics Table
 # ─────────────────────────────────────────────────────────────
 
