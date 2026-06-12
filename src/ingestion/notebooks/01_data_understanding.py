@@ -395,7 +395,7 @@ def print_summary_statistics(df: pd.DataFrame, cal: pd.DataFrame, prices: pd.Dat
     logger.info("═" * 60)
 
 
-# ─────────────────────────────────────────────────────────────
+
 # Main
 # ─────────────────────────────────────────────────────────────
 
@@ -410,6 +410,7 @@ def main() -> None:
     prices = loader.load_prices()
     meta   = loader.load_sales_meta()
 
+
     # ── Validate raw tables ───────────────────────────────────
     validator = M5Validator()
     raw_report = validator.validate_raw(cal, prices, meta)
@@ -418,6 +419,7 @@ def main() -> None:
     # ── Memory comparison plot (uses raw files, no processed needed) ──
     if cfg.RAW_SALES.exists():
         plot_memory_comparison(loader)
+
 
     # ── Load or build processed long-format data ──────────────
     prep = M5Preprocessor()
@@ -446,8 +448,10 @@ def main() -> None:
     processed_report = validator.validate_processed(df)
     M5Validator.print_report(processed_report)
 
+
     # ── Summary stats ─────────────────────────────────────────
     print_summary_statistics(df, cal, prices)
+
 
     # ── EDA plots ─────────────────────────────────────────────
     plot_sales_distribution(df)
