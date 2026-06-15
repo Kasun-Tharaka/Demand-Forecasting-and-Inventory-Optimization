@@ -138,7 +138,7 @@ def plot_memory_comparison(loader: M5DataLoader) -> None:
     savefig("08_memory_comparison.png")
 
 
-# ─────────────────────────────────────────────────────────────
+
 # 2. Sales Distribution & Zero-Inflation
 # ─────────────────────────────────────────────────────────────
 
