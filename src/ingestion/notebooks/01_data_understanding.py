@@ -66,7 +66,7 @@ from src.ingestion.preprocessor import M5Preprocessor
 from src.ingestion.validator import M5Validator
 
 
-# ─────────────────────────────────────────────────────────────
+
 # Plot style
 # ─────────────────────────────────────────────────────────────
 sns.set_theme(style="whitegrid", palette="muted", font_scale=1.1)
@@ -83,7 +83,7 @@ def savefig(name: str) -> None:
     logger.info(f"Saved plot → {path}")
 
 
-# ─────────────────────────────────────────────────────────────
+
 # 1. Memory Comparison: naive vs optimised
 # ─────────────────────────────────────────────────────────────
 
@@ -405,13 +405,13 @@ def main() -> None:
     loader = M5DataLoader()
     loader.memory_report()
 
-    # ── Load reference tables ─────────────────────────────────
+    # ── Load reference tables ────────────────────────────
     cal    = loader.load_calendar()
     prices = loader.load_prices()
     meta   = loader.load_sales_meta()
 
 
-    # ── Validate raw tables ───────────────────────────────────
+    # ── Validate raw tables ────────────────────────────
     validator = M5Validator()
     raw_report = validator.validate_raw(cal, prices, meta)
     M5Validator.print_report(raw_report)
